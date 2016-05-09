@@ -1,0 +1,13 @@
+<h1 class="text-center">All products</h1>
+<p>
+  <%= link_to "Revenir à l'acceuil", root_path, class: "btn btn-primary" %>
+</p>
+
+
+  <ul>
+    <%@products.each do |product| %>
+    <li>
+     <%= link_to product.name, product_path(product) %> (<%=product.url%>)
+    </li>
+    <%end%>
+  </ul>
