@@ -1,8 +1,14 @@
-<form action="/products" method="post">
-  <input type="text" name="product[name]">
-  <input type="text" name="product[url]">
-  <input type="submit" >
-</form>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <h1 class="text-center">Ajouter un produit</h1>
 
+      <%= simple_form_for @product do |f| %>
+        <%= f.input :name, placeholder: "name", label: "quel produit?" %>
+        <%= f.input :url, placeholder: "url", label: "quel url?" %>
+        <%= f.button :submit, "Ajouter", class: "btn btn-primary" %>
+      <% end %>
 
-
+    </div>
+  </div>
+</div>
